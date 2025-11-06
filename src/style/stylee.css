@@ -1,0 +1,351 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra de navegação */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo */
+.navbar .logo {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+/* Hover nos links */
+.navbar a:hover {
+  background-color: #575757;
+}
+
+/* Container dos links e da busca */
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* Barra de pesquisa */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-form button {
+  padding: 6px 10px;
+  border: none;
+  background-color: #575757;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #777;
+}
+
+/* Responsivo para celular */
+@media (max-width: 600px) {
+  .nav-content {
+    flex-direction: column;
+    align-items: stretch;
+    display: none;
+  }
+
+  .navbar.active .nav-content {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .search-form {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-form input {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  .search-form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  
+  .search-form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .search-form button:hover {
+    background-color: #555;
+  }
+
+  .container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  /* === Sidebar === */
+  .sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Perfil */
+  .profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+  }
+  
+  .role {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+  }
+  
+  .stats strong {
+    display: block;
+    font-size: 18px;
+  }
+  
+  /* Filtros */
+  .filters {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filters h3 {
+    margin-bottom: 10px;
+  }
+  
+  .filters label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .filters select,
+  .filters button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .btn-primary {
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #333;
+  }
+  
+  /* === Main === */
+  .main-content {
+    flex: 1;
+    margin-left: 30px;
+  }
+  
+  /* Cabeçalho */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulário */
+  .form-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-section h2 {
+    margin-bottom: 15px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    height: 80px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .btn-secondary {
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #ddd;
+  }
+  
+  /* === Cards de Livros === */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .book-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .book-cover {
+    background: #ccc;
+    height: 150px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .book-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .book-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: #eee;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .rating {
+    font-size: 14px;
+    color: #333;
+  }
+  

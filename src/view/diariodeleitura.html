@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Simples</title>
+  <link rel="stylesheet" href="/tiin-backend-main/src/style/stylee.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">BiblioFile</a>
+    <span class="menu-toggle" id="menu-toggle">&#9776;</span>
+    <div class="nav-links">
+      <a href="#home">Dashboard</a>
+      <a href="#sobre">Meus livros</a>
+      <a href="#servicos">Comunidade</a>
+      <a href="#contato">Recomendações</a>
+    </div>
+    <form class="container" action="#" method="get">
+      <input type="text" id="buscaUsuario" placeholder="Buscar por nome ou e-mail..." />
+      <div id="listaUsuarios"></div>
+
+      </form>
+  </nav>
+
+
+    <aside class="sidebar">
+      <div class="profile-card">
+        <h2>Ana Carolina </h2>
+        <p class="role">Leitora</p>
+        <div class="stats">
+          <div>
+            <strong>47</strong>
+            <span>Livros Lidos</span> 
+          </div>
+          <div>
+            <strong>9.8</strong>
+            <span>Média de Notas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="filters">
+        <h3>Filtros</h3>
+        <label for="genero">Gênero</label>
+        <select id="genero">
+          <option>Todos os gêneros</option>
+          <option>Fantasia</option>
+          <option>Romance</option>
+          <option>Ficção Científica</option>
+        </select>
+
+        <label for="nota">Nota</label>
+        <select id="nota">
+          <option>Todas as notas</option>
+          <option>5 estrelas</option>
+          <option>4 estrelas</option>
+          <option>3 estrelas</option>
+        </select>
+
+        <button class="btn-primary">Aplicar Filtros</button>
+      </div>
+    </aside>
+
+    
+    <main class="main-content">
+      <header class="header">
+        <h1>Meu Diário de Leitura</h1>
+        <button class="btn-primary">+ Registrar Leitura</button>
+      </header>
+
+      <section class="form-section">
+        <h2>Registre sua Leitura</h2>
+
+        <form class="reading-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Título do Livro</label>
+              <input type="text" placeholder="Digite o título do livro">
+            </div>
+            <div class="form-group">
+              <label>Autor</label>
+              <input type="text" placeholder="Nome do autor">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Gênero do Livro</label>
+              <select>
+                <option>Selecione o gênero</option>
+                <option>Fantasia</option>
+                <option>Romance</option>
+                <option>Ficção Científica</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Total de Páginas</label>
+              <input type="number" placeholder="Ex: 350">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tempo de Leitura (horas)</label>
+              <input type="number" placeholder="Ex: 15">
+            </div>
+            <div class="form-group">
+              <label>Sua Nota (1–5)</label>
+              <select>
+                <option>Selecione uma nota</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Resenha (opcional)</label>
+            <textarea placeholder="Compartilhe sua opinião sobre o livro..."></textarea>
+          </div>
+
+          <div class="form-buttons">
+            <button type="button" class="btn-secondary">Cancelar</button>
+            <button type="submit" class="btn-primary">Registrar Leitura</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="books-grid">
+        <div class="book-card">
+          <div class="book-cover">Capa do Livro</div>
+          <h3>O Senhor dos Anéis</h3>
+          <p>J.R.R. Tolkien</p>
+          <span class="tag">Fantasia</span>
+          <div class="rating">5.0</div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-cover">Capa do Livro</div>
+          <h3>Duna</h3>
+          <p>Frank Herbert</p>
+          <span class="tag">Ficção Científica</span>
+          <div class="rating">4.0</div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-cover">Capa do Livro</div>
+          <h3>Orgulho e Preconceito</h3>
+          <p>Jane Austen</p>
+          <span class="tag">Romance</span>
+          <div class="rating">5.0</div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="../app.js"></script>
+  <script>
+    const btnUsuarios = document.getElementById("btnUsuarios");
+    const modalUsuarios = document.getElementById("usuariosModal");
+    const fecharUsuarios = document.getElementById("fecharUsuarios");
+    const listaUsuarios = document.getElementById("listaUsuarios");
+    const buscaUsuario = document.getElementById("buscaUsuario");
+    
+  
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
